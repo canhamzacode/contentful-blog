@@ -14,10 +14,17 @@ const geistMono = Geist_Mono({
 
 export default function Home() {
   return (
-    <div>
-      <h1>Here will be our title</h1>
-      <p>Here will be our description</p>
-      <Link href="/">Our url goes here</Link>
+    <div className="flex flex-col gap-3">
+      <h1 className="text-3xl">Welcome to My Blog</h1>
+      <p>
+        This is a simple blog built with Next.js and Contentful. The goal was to play around with contentful nothing serious.
+      </p>
+      <div className="flex">
+        <p>Bult By: </p>
+        <Link href="/posts" className="underline">
+          CanHamzaCode
+        </Link>
+      </div>
     </div>
   );
 }

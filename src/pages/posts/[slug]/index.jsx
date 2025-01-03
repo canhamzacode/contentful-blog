@@ -55,7 +55,7 @@ export const getStaticProps = async ({ params, preview = false }) => {
 }
 
 export const getStaticPaths = async () => {
-  const response = await client.getEntries({ content_type: 'post' })
+  const response = await client.getEntries({ content_type: 'blogPost' })
   const paths = response.items.map(item => ({
     params: { slug: item.fields.slug }
   }))
